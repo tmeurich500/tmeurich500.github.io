@@ -1,0 +1,188 @@
+/* ChatGPT helped with syntax and formatting on this entire css file */
+
+@font-face {
+    font-family: 'AvatarFont';
+    src: url('fonts/AvatarAirbender.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Herculanum';
+    src: url('fonts/HerculanumRegular.ttf') format('truetype');
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #0a2342;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'AvatarFont', sans-serif;
+}
+
+
+.hero-header {
+    background-color: #42a5f5;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #0288d1;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+section {
+    background: #ffffff;
+    border: 2px solid #00838f;
+    padding: 1rem;
+}
+
+/* Profile Table */
+.profile-box table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+caption {
+    font-weight: bold;
+    padding: 0.6em;
+}
+th, td {
+    border: 1px solid #90caf9;
+    padding: 0.5rem;
+}
+tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* Media Gallery */
+.media-section {
+    background: #e0f2f1;
+    border: 2px solid #4db6ac;
+}
+.media-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.media-grid img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #00796b;
+    transition: transform 0.3s ease;
+}
+.media-grid img:hover {
+    transform: scale(2);
+    z-index: 2;
+    position: relative;
+}
+
+.video-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+.caption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Feedback Form */
+.feedback-zone form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #00acc1;
+}
+fieldset {
+    border: 1px solid #4dd0e1;
+    padding: 1rem;
+}
+legend {
+    font-weight: bold;
+    color: #006064;
+}
+input, textarea, button, select {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+.rating-options {
+    display: flex;
+    gap: 1rem;
+}
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+button {
+    background-color: #00838f;
+    color: white;
+    border: none;
+}
+button:hover {
+    background-color: #0097a7;
+    cursor: pointer;
+}
+
+/* Floating Badge */
+.badge {
+    font-family: Impact;
+    font-size: 1.5rem;
+    background-color: #fffd93;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fffd93;
+    padding: 0.6em 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.media-grid {
+    flex-wrap: wrap;
+    max-width: 650px;
+    margin: auto;
+}
+
+#fav-color {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.feedback-zone form > * {
+    margin-bottom: 1.2rem;
+}
+
+.feedback-zone form > * {
+    margin-bottom: 1.8rem !important;
+}
+.feedback-zone form label,
+.feedback-zone form input,
+.feedback-zone form textarea {
+    display: block;
+}

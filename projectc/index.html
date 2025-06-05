@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--ChatGPT helped with syntax and formatting on most of this code-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokka's Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'AvatarFont';
+            src: url('fonts/AvatarAirbender.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Herculanum';
+            src: url('fonts/HerculanumRegular.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-header">
+        <h1 style="color: black; font-size: 3.5rem;">Sokka of the Southern Water Tribe</h1>
+        <p>Meat. Sarcasm. Boomerangs.</p>
+    </header>
+
+    <main class="grid-layout">
+
+        <!-- Profile Information -->
+        <section class="profile-box">
+            <h2>Meet Sokka</h2>
+            <table>
+                
+                <thead>
+                    <tr><th colspan="2">Sokka of the Water Tribe</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Name:</td><td>Sokka</td></tr>
+                    <tr><td>Birthday:</td><td>Waning Moon, 84 AG</td></tr>
+                    <tr><td>Favorite Color:</td><td>Blue</td></tr>
+                    <tr><td>Favorite Quote:</td><td>"I'm just a guy who loves comedy."</td></tr>
+                    <tr><td>Favorite Food:</td><td>Boiled Sea Prunes</td></tr>
+                    <tr><td>Favorite Animal:</td><td>Sabertooth Moose-Lion</td></tr>
+                    <tr><td>Favorite Weapon:</td><td>Boomerang!</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td colspan="2" style="text-align: center;">Warrior. Strategist. Prince of the Northern Water Tribe.</td></tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Media Gallery -->
+        <section class="media-section">
+            <h2>Sokka's Gallery</h2>
+            <div class="media-grid">
+                <!-- Grid of 8 images -->
+                <img src="media/sokka1.jpg" alt="Sokka 1">
+                <img src="media/sokka2.jpg" alt="Sokka 2">
+                <img src="media/sokka3.jpg" alt="Sokka 3">
+                <img src="media/sokka4.jpg" alt="Sokka 4">
+                <img src="media/sokka5.jpg" alt="Sokka 5">
+                <img src="media/sokka6.jpg" alt="Sokka 6">
+                <img src="media/sokka7.jpg" alt="Sokka 7">
+                <img src="media/sokka8.jpg" alt="Sokka 8">
+            </div>
+            <div class="video-wrapper">
+                <iframe width="518" height="280" src="https://www.youtube.com/embed/9EXdomrJLcE" title="Sokka's Funniest Moments of All Time" allowfullscreen></iframe>
+                <p class="caption">Watch Sokka's Funniest Moments </p>
+            </div>
+        </section>
+
+        <!-- Feedback Form -->
+        <section class="feedback-zone">
+            <h2>Send Sokka a Message</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Let’s Hear It!</legend>
+
+                    <label for="visitor-name">Your Name:</label>
+                    <input type="text" id="visitor-name" name="visitor-name" required>
+
+                    <label for="visitor-email">Email:</label>
+                    <input type="email" id="visitor-email" name="visitor-email" required>
+
+                    <label for="fav-color">Pick a color:</label>
+                    <input type="color" id="fav-color" name="fav-color">
+
+                    
+<label style="margin-right: 1rem;">Rate This Profile:</label>
+<div class="rating-options">
+    <label><input type="radio" name="rating" value="1"> 1</label>
+    <label><input type="radio" name="rating" value="2"> 2</label>
+    <label><input type="radio" name="rating" value="3"> 3</label>
+    <label><input type="radio" name="rating" value="4"> 4</label>
+    <label><input type="radio" name="rating" value="5"> 5</label>
+</div>
+
+
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="msg" rows="5" required></textarea>
+
+                    <div style="display: flex; align-items: center;"><span style="font-size: 1.1rem; margin-right: 10px;">Join the Boomerang Fan Club</span><input type="checkbox" name="subscribe" style="transform: scale(1.5);"></div>
+
+                    
+
+                    <button type="submit">Send It By Messenger Hawk!</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- Floating Badge -->
+    <div class="badge">Sokka Approved ✅</div>
+</body>
+
+<footer style="text-align: center; font-size: 0.9rem; padding: 1rem; background-color: #f0f0f0; color: #333; margin-top: 2rem;">
+    <p>&copy; 2025. All characters, names, and related indicia are trademarks of Nickelodeon and ViacomCBS. This fan page is for educational 
+        purposes only and is not affiliated with or endorsed by Nickelodeon.</p>
+    <!--Generated by ChatGPT-->
+</footer>
+
+</html>
