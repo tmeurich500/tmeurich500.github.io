@@ -1,41 +1,51 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8"/>  
-    <title>Lab 9</title>   
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">  
-    <link rel="stylesheet" href="ch09-proj01.css">
-    
-    <script src="ch09-proj01.js"></script> 
+  <meta charset="utf-8"/>  
+  <title>Lab 9</title>  
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">  
+  <link rel="stylesheet" href="ch09-proj01.css">
 </head>
 <body>
 
-
 <h1>Project 1</h1>
-<main>
-   <aside></aside>
-   <section>
-      <video id="vidPlayer" >
-         <source src="videos/Nature-8399.mp4" />
-      </video>
-   
-      <div id="controls">
-        <div id="progress">
-         <div id="progressFilled"></div>
-        </div>
-        <button data-skip="-5" >⯇⯇</button>
-        <button id="play" title="Toggle Play">⯈</button>        
-        <button data-skip="5" >⯈⯈</button>
-        <button id="stop">◼</button>
-         🕨
-         <input type="range" id="volume" min="0" max="1" step="0.05" value="1"> 
-        🕪
-   
-      </div>
-   </section>
 
+<main style="display: flex; flex-direction: column; align-items: center;">
+  <aside></aside>
+
+  <section style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <video id="vidPlayer" poster="images/Nature-8399.jpg">
+      <source src="videos/Nature-8399.mp4" type="video/mp4">
+    </video>
+
+    <!-- Progress bar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 90%; margin-top: 10px;">
+      <span id="currentTime">0:00</span>
+      <div id="progress" style="flex: 1; margin: 0 10px;"><div id="progressFilled"></div></div>
+      <span id="remainingTime">0:00</span>
+    </div>
+
+    <!-- Buttons row -->
+    <div id="controls">
+      <div style="display: flex; justify-content: space-between; width: 90%; margin-top: 10px;">
+        <button id="prev" title="Previous Video">⏮</button>
+        <button data-skip="-5" title="Rewind 5 Seconds">⯇⯇</button>
+        <button id="play" title="Play">⯈</button>        
+        <button data-skip="5" title="Fast Forward 5 Seconds">⯈⯈</button>
+        <button id="stop" title="Stop">◼</button>
+        <button id="next" title="Next Video">⏭</button>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: center; width: 25%; margin-top: 10px;">
+        🕨
+        <input type="range" id="volume" min="0" max="1" step="0.05" value="1" title="Volume" style="flex: 1; margin: 0 10px;">
+        🕪
+      </div>
+    </div>
+  </section>
 </main>
-   
+
+<script src="ch09-proj01.js"></script>
 </body>
 </html>
