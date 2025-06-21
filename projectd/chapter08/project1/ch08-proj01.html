@@ -6,11 +6,17 @@
     <title>Chapter 08 - Project 01</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet" />
-    <script src="js/data.js" type="text/JavaScript"></script>
-    <script src="js/functions.js" type="text/JavaScript"></script>
+    <script src="js/data.js" ></script>
+    <script src="js/functions.js" ></script>
 </head>
 
 <body>
+    <div style="padding: 1em;">
+        <label>Tax Rate: <input type="number" id="taxRate" step="0.01" value="0.10"></label>
+        <label>Shipping Threshold: <input type="number" id="shipThreshold" value="1000"></label>
+        <button onclick="calculateCart()">Calculate</button>
+    </div>
+
 <table class="table-fill">
     <thead>
         <tr>
@@ -20,55 +26,14 @@
             <th>Amount</th>
         </tr>
     </thead>
-    <tbody>
-
-        <tr>
-            <td><img src="images/105070.jpg"></td>
-            <td>Portrait of Marten Soolmans</td>
-            <td>3</td>
-            <td>$75.00</td>
-            <td>$225.00</td>
-        </tr>
-        <tr>
-            <td><img src="images/106060.jpg"></td>
-            <td>View of Houses in Delft</td>
-            <td>1</td>
-            <td>$125.00</td>
-            <td>$125.00</td>
-        </tr>
-        <tr>
-            <td><img src="images/106050.jpg"></td>
-            <td>Woman Reading a Letter</td>
-            <td>2</td>
-            <td>$100.00</td>
-            <td>$200.00</td>
-        </tr> 
-        <tr class="totals">
-            <td colspan="4">Subtotal</td>
-            <td>$550.00</td>
-        </tr>
-        <tr class="totals">
-            <td colspan="4">Tax</td>
-            <td>$55.00</td>
-        </tr>
-        <tr class="totals">
-            <td colspan="4">Shipping</td>
-            <td>$0.00</td>
-        </tr>
-        <tr class="totals">
-            <td colspan="4" class="focus">Grand Total</td>
-            <td class="focus">$605.00</td>
-        </tr>
-    
-    </tbody>
-    <thead>
-        <tr><td colspan="4" class="totals">Subtotal</td><td id="subtotal">$0.00</td></tr>
-        <tr><td colspan="4" class="totals">Tax</td><td id="tax">$0.00</td></tr>
-        <tr><td colspan="4" class="totals">Shipping</td><td id="shipping">$0.00</td></tr>
-        <tr><td colspan="4" class="totals"><strong>Grand Total</strong></td><td id="grandtotal"><strong>$0.00</strong></td></tr>
-    </thead>
-
-</table>
-    <script src="js/ch08-proj01.js" type="text/javascript"></script>
+    <tbody id="cart-body">
+</tbody>
+<tbody>
+    <tr class="totals"><td colspan="4">Subtotal</td><td id="subtotal">$0.00</td></tr>
+    <tr class="totals"><td colspan="4">Tax</td><td id="tax">$0.00</td></tr>
+    <tr class="totals"><td colspan="4">Shipping</td><td id="shipping">$0.00</td></tr>
+    <tr class="totals"><td colspan="4" class="focus">Grand Total</td><td id="grandtotal">$0.00</td></tr>
+</tbody>
+<script src="js/ch08-proj01.js"></script>
 </body>
 </html>
